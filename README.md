@@ -37,11 +37,12 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I had a very good understanding of Android basics previously. This app gave me an opprotunity to revise my concepts and made me to remember few things. I am planning to improve the funtionality by switching to Sqlite storage, Custom view, Fragments instead of Activity etc. Hope I can submit the next version early.
+Thanks for the opporutnity :)
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2016] [Vijayaraj Gopinath]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
