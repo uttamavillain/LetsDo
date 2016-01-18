@@ -33,4 +33,35 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rgprioirty"
+        android:layout_below="@id/etTaskTitle"
+        android:layout_above="@id/btnSave">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High Priority"
+            android:id="@+id/high_prioirty"
+            android:layout_below="@+id/etTaskTitle"
+            android:layout_centerHorizontal="true" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium Priority"
+            android:id="@+id/medium_prioirty"
+            android:layout_below="@+id/etTaskTitle"
+            android:layout_centerHorizontal="true" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low Priority"
+            android:id="@+id/low_prioirty"
+            android:layout_below="@+id/etTaskTitle"
+            android:layout_centerHorizontal="true" />
+
+    </RadioGroup>
+
 </RelativeLayout>
