@@ -16,14 +16,18 @@ public class EditItemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_item);
         etTaskTitle = (EditText) findViewById(R.id.etTaskTitle);
-        etTaskTitle.setText(getIntent().getStringExtra(MainActivity.TASK_NAME));
+        final long task_id = getIntent().getLongExtra(MainActivity.TASK_ID,0);
+        final Task task = Task.load(Task.class,task_id);
+        etTaskTitle.setText(task.name);
         btnSave = (Button) findViewById(R.id.btnSave);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String newVal = etTaskTitle.getText().toString();
+                task.name = newVal;
+                task.save();
                 Intent data = new Intent();
-                data.putExtra(MainActivity.ITEM_POS,getIntent().getIntExtra(MainActivity.ITEM_POS,0));
-                data.putExtra(MainActivity.TASK_NAME, etTaskTitle.getText().toString());
+                data.putExtra(MainActivity.TASK_ID, task_id);
                 setResult(RESULT_OK, data);
                 finish();
             }
